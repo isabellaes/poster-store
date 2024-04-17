@@ -1,8 +1,10 @@
 @import "../style/variables/colors";
 @import "../style/variables/font";
+@import "./functions/functions";
 @import "../pages/root/root";
 @import "../components/search/search";
 @import "../components/navbar/navbar";
+@import "../pages/category/categoryPage";
 
 * {
   padding: 0;

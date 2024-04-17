@@ -1,0 +1,13 @@
+.category-page {
+  .sort-and-filter-btns {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1em;
+    width: 80vw;
+    .sort-button,
+    .filter-button {
+      @include standard-btn(15em);
+    }
+  }
+}
