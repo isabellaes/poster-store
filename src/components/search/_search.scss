@@ -1,0 +1,19 @@
+.search {
+  display: flex;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 5px 15px 5px 15px;
+  .search-field {
+    border: none;
+    outline: none;
+    color: #575757;
+  }
+
+  .search-button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+}

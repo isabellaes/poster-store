@@ -1,0 +1,12 @@
+@import "../style/variables/colors";
+@import "../style/variables/font";
+@import "../pages/root/root";
+@import "../components/search/search";
+@import "../components/navbar/navbar";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $fontRegular;
+}
