@@ -5,6 +5,10 @@
 @import "../components/search/search";
 @import "../components/navbar/navbar";
 @import "../pages/category/categoryPage";
+@import "../pages/product/productPage";
+@import "../components/productCard/productCard";
+@import "../components/pagination/pagination";
+@import "../pages/cart/cartPage";
 
 * {
   padding: 0;

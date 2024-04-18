@@ -8,6 +8,8 @@ import CategoryPage from "./pages/category/CategoryPage.tsx";
 import ProductPage from "./pages/product/ProductPage.tsx";
 import OrderPage from "./pages/order/OrderPage.tsx";
 import CartPage from "./pages/cart/CartPage.tsx";
+import { Provider } from "react-redux";
+import store from "./redux/store.ts";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,7 @@ const router = createBrowserRouter([
       { index: true, element: <Index /> },
       { path: "category/:categoryId", element: <CategoryPage /> },
       { path: "product/:productId", element: <ProductPage /> },
-      { path: "cart/:cartId", element: <CartPage /> },
+      { path: "cart", element: <CartPage /> },
       { path: "order/:orderId", element: <OrderPage /> },
     ],
   },
@@ -25,6 +27,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
