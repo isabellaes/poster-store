@@ -1,0 +1,31 @@
+.card {
+  @include flex-column;
+  margin: 1em;
+  width: 250px;
+  height: 500px;
+  img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+    padding: 1em;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .product-info {
+    margin: 1em 0 1em 0;
+  }
+
+  .add-to-cart-container {
+    @include flex-row;
+    max-width: 200px;
+    margin-top: 1em;
+    @include dual-buttons(4em, #5ca6f4);
+    button:hover {
+      background-color: #016de1;
+    }
+  }
+}
