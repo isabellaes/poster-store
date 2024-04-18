@@ -10,4 +10,24 @@
       @include standard-btn(15em);
     }
   }
+
+  .content {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 1em 0;
+  }
+
+  .container {
+    min-height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1em;
+    padding: 1em;
+  }
 }

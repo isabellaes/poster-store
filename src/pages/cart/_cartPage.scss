@@ -1,0 +1,65 @@
+.container-shoppingcart {
+  @include container-standard;
+  @include flex-column;
+  align-items: center;
+
+  h2 {
+    padding-top: 1em;
+  }
+
+  .update-cartitem-btn {
+    @include flex-row;
+    margin-top: 1em;
+    align-items: center;
+    button {
+      border: none;
+      background-color: inherit;
+      padding-top: 1em;
+      cursor: pointer;
+    }
+    p {
+      padding: 1.5em 1em 1em 1em;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  .total-cost {
+    padding: 1em;
+  }
+  .cart-btns {
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    .btn-cart {
+      @include standard-btn(10em);
+    }
+  }
+
+  .remove-button {
+    border: none;
+    background-color: inherit;
+    padding: 1em;
+    cursor: pointer;
+  }
+
+  .cart-item {
+    padding: 1em;
+    @include flex-row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 400px;
+
+    .left,
+    .rigth {
+      @include flex-column;
+      width: 50%;
+      padding: 1em;
+    }
+
+    img {
+      width: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.445);
+      padding: 1em;
+    }
+  }
+}
