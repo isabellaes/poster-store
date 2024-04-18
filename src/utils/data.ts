@@ -78,7 +78,7 @@ export const products: Product[] = [
     description: "Poster of a green cactus.",
     size: "20x30cm",
     tags: ["green", "cactus"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "2",
@@ -88,7 +88,7 @@ export const products: Product[] = [
     description: "Poster with eucalyptus in hand",
     size: "20x30cm",
     tags: ["plant", "green", "eucalyptus", "hand"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "3",
@@ -98,7 +98,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green", "ornament"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "4",
@@ -108,7 +108,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "purple"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "5",
@@ -118,7 +118,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "rose", "red", "garden"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "6",
@@ -128,7 +128,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "7",
@@ -138,7 +138,7 @@ export const products: Product[] = [
     description: "Poster of a green cactus.",
     size: "20x30cm",
     tags: ["plant", "green", "cactus"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "8",
@@ -148,7 +148,7 @@ export const products: Product[] = [
     description: "Poster of a green cactus.",
     size: "20x30cm",
     tags: ["plant", "green", "cactus"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "9",
@@ -158,7 +158,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green", "pink", "flower"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "10",
@@ -168,7 +168,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "red", "brown", "ornament"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "11",
@@ -178,7 +178,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "leafs", "red", "brown"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "12",
@@ -188,7 +188,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flowers", "pink", "red"],
-    category: categorys[0],
+    category: categorys[1],
   },
 
   {
@@ -199,7 +199,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["animal", "blue", "sea", "dolphine"],
-    category: categorys[0],
+    category: categorys[2],
   },
 
   {
@@ -221,7 +221,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["fox", "animal", "red"],
-    category: categorys[0],
+    category: categorys[2],
   },
 
   {
@@ -232,7 +232,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["lion", "animal", "yellow"],
-    category: categorys[0],
+    category: categorys[2],
   },
   {
     id: "21",
@@ -242,7 +242,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["dog", "animal", "yellow", "black"],
-    category: categorys[0],
+    category: categorys[2],
   },
 
   {
@@ -253,7 +253,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["quote", "black", "white"],
-    category: categorys[0],
+    category: categorys[3],
   },
 
   {
@@ -264,7 +264,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green", "pink", "flower"],
-    category: categorys[0],
+    category: categorys[1],
   },
 
   {
@@ -275,7 +275,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["animal", "grey", "green", "cat"],
-    category: categorys[0],
+    category: categorys[2],
   },
 
   {
@@ -286,7 +286,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "raindrop", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "36",
@@ -296,7 +296,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "forest", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "37",
@@ -306,7 +306,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "pink", "yellow"],
-    category: categorys[0],
+    category: categorys[1],
   },
 
   {
@@ -328,7 +328,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["meadow", "flower", "yellow"],
-    category: categorys[0],
+    category: categorys[1],
   },
 
   {
@@ -339,7 +339,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "43",
@@ -349,7 +349,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "white"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "45",
@@ -359,7 +359,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["animal", "bird", "blue", "yellow"],
-    category: categorys[0],
+    category: categorys[2],
   },
   {
     id: "46",
@@ -369,7 +369,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "pink"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "47",
@@ -379,7 +379,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "48",
@@ -389,7 +389,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "49",
@@ -399,7 +399,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "green", "purple"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "50",
@@ -419,7 +419,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["animal", "grey"],
-    category: categorys[0],
+    category: categorys[2],
   },
 
   {
@@ -430,7 +430,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "pink"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "54",
@@ -440,7 +440,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "pink"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "55",
@@ -450,7 +450,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["quote", "black", "white"],
-    category: categorys[0],
+    category: categorys[3],
   },
   {
     id: "56",
@@ -460,7 +460,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "white"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "57",
@@ -470,7 +470,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "leaf", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "58",
@@ -531,7 +531,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["plant", "leaf", "green"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "65",
@@ -541,7 +541,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["quote", "black", "white"],
-    category: categorys[0],
+    category: categorys[3],
   },
 
   {
@@ -552,7 +552,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["animal", "orange"],
-    category: categorys[0],
+    category: categorys[2],
   },
   {
     id: "70",
@@ -562,7 +562,7 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["flower", "pink", "green", "rose"],
-    category: categorys[0],
+    category: categorys[1],
   },
   {
     id: "71",
@@ -583,6 +583,6 @@ export const products: Product[] = [
     description: "Poster",
     size: "20x30cm",
     tags: ["Animal", "butterfly", "orange"],
-    category: categorys[0],
+    category: categorys[2],
   },
 ];
