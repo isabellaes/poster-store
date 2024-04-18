@@ -1,0 +1,82 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  min-width: 200px;
+  max-width: max-content;
+  margin: 0.5em;
+  box-shadow: 0 2px 4px 0 $boxshadowColor, 0 3px 10px 0 $boxshadowColor;
+
+  &.primary {
+    background-color: $primaryColor_background;
+  }
+
+  &.secondary {
+    background-color: $secondaryColor_background;
+  }
+
+  &.rounded {
+    box-shadow: 0 2px 4px 0 $boxshadowColor, 0 2px 4px 0 $boxshadowColor;
+    border-radius: 50px;
+  }
+
+  .icon-btn {
+    padding: 5px;
+    cursor: pointer;
+    min-height: 1em;
+    min-width: 1em;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    background: none;
+    box-shadow: 0 2px 4px 0 $boxshadowColor, 0 3px 10px 0 $boxshadowColor;
+
+    &.primary {
+      background-color: $primaryColor_background;
+    }
+
+    &.secondary {
+      background-color: $secondaryColor_background;
+    }
+
+    &.rounded {
+      box-shadow: 0 2px 4px 0 $boxshadowColor, 0 2px 4px 0 $boxshadowColor;
+      border-radius: 50%;
+    }
+  }
+
+  .pagination-item {
+    padding: 5px;
+    min-height: 1em;
+    min-width: 1em;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 $boxshadowColor, 0 3px 10px 0 $boxshadowColor;
+
+    &.rounded {
+      box-shadow: 0 2px 6px 0 $boxshadowColor, 0 2px 4px 0 $boxshadowColor;
+      border-radius: 50%;
+    }
+
+    &.primary {
+      background-color: $primaryColor_background;
+      &.active {
+        background-color: $primaryColor_active;
+        outline: 1px solid $primaryColor_outline;
+        transition: background-color 0.5s ease-in;
+      }
+    }
+
+    &.secondary {
+      background-color: $secondaryColor_background;
+      &.active {
+        background-color: $secondaryColor_active;
+        outline: 1px solid $secondaryColor_outline;
+        transition: background-color 0.5s ease-in;
+      }
+    }
+  }
+}
