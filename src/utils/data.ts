@@ -54,18 +54,22 @@ export const categorys: Category[] = [
   {
     id: "1",
     name: "Abstract",
+    img: image15,
   },
   {
     id: "2",
     name: "Plant",
+    img: image1,
   },
   {
     id: "3",
     name: "Animal",
+    img: image18,
   },
   {
     id: "4",
     name: "Quote",
+    img: image55,
   },
 ];
 

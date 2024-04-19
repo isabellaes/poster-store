@@ -20,7 +20,7 @@ const Root = () => {
   }, 0);
   return (
     <div className="root-element">
-      <h1>POSTER STORE</h1>
+      <h1 onClick={() => navigate("/")}>POSTER STORE</h1>
       <p>For all your creative needs.</p>
       <div className="row-spacebetween">
         <NavBar items={categorys} />
