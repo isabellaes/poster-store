@@ -1,5 +1,3 @@
-import TuneIcon from "@mui/icons-material/Tune";
-import SwapVertIcon from "@mui/icons-material/SwapVert";
 import { useDispatch, useSelector } from "react-redux";
 import { State } from "../../redux/store";
 import { useParams } from "react-router-dom";
