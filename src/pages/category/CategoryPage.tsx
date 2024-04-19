@@ -34,16 +34,6 @@ const CategoryPage = () => {
 
   return (
     <div className="category-page">
-      <div className="sort-and-filter-btns">
-        <button className="filter-button">
-          <TuneIcon></TuneIcon>
-          FILTER
-        </button>
-        <button className="sort-button">
-          <SwapVertIcon></SwapVertIcon>
-          SORT
-        </button>
-      </div>
       <div className="content">
         <div className="container">
           {displayedProducts.map((p) => (
