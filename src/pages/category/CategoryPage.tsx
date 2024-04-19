@@ -13,6 +13,7 @@ const CategoryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const params = useParams<{ categoryId: string }>();
   const products = useSelector((state: State) => state.product.products);
+
   const productsByCategory = products.filter(
     (p) => p.category.id === params.categoryId
   );
@@ -49,13 +50,17 @@ const CategoryPage = () => {
             <ProductCard product={p} addToCart={handleAddToCart} />
           ))}
         </div>
-        <Pagination
-          count={Math.ceil((productsByCategory.length || 0) / itemsPerPage)}
-          onChange={setCurrentPage}
-          currentPage={currentPage}
-          variant={"rounded"}
-          color={"secondary"}
-        />
+        {Math.ceil((productsByCategory.length || 0) / itemsPerPage) > 1 ? (
+          <Pagination
+            count={Math.ceil((productsByCategory.length || 0) / itemsPerPage)}
+            onChange={setCurrentPage}
+            currentPage={currentPage}
+            variant={"rounded"}
+            color={"secondary"}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
