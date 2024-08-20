@@ -1,8 +1,29 @@
 # Poster store
 
-Demo webbshop
+Demo webbshop till portfolio
+
+## Installation
+
+Clone project
+
+```bash
+git clone https://github.com/isabellaes/poster-store.git
+
+```
+
+Install and run project
+
+```bash
+npm i
+npm run dev
+
+```
+
+## Tech
 
 - Typescript
-- react-router-dom
-- redux
-- sass
+- React-router-dom
+- Redux
+- Sass
+- Mui
+- React vite
