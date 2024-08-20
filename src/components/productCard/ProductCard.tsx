@@ -27,6 +27,7 @@ export default function ProductCard(props: props) {
         <input
           type="number"
           value={quantity}
+          min="1"
           className="input-number"
           onChange={(e) => setQuantity(parseInt(e.target.value))}
         />
