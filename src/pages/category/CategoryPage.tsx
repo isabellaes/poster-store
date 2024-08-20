@@ -3,9 +3,10 @@ import { State } from "../../redux/store";
 import { useParams } from "react-router-dom";
 import ProductCard from "../../components/productCard/ProductCard";
 import { useState } from "react";
-import Pagination from "../../components/pagination/Pagination";
 import { CartItem, Product } from "../../utils/types";
 import { addToCart } from "../../redux/reducer/cartSlice";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 
 const CategoryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,6 +21,10 @@ const CategoryPage = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const displayedProducts = productsByCategory.slice(startIndex, endIndex);
+
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setCurrentPage(value);
+  };
 
   const dispatch = useDispatch();
   const handleAddToCart = (product: Product, quantity: number) => {
@@ -39,13 +44,13 @@ const CategoryPage = () => {
           ))}
         </div>
         {Math.ceil((productsByCategory.length || 0) / itemsPerPage) > 1 ? (
-          <Pagination
-            count={Math.ceil((productsByCategory.length || 0) / itemsPerPage)}
-            onChange={setCurrentPage}
-            currentPage={currentPage}
-            variant={"rounded"}
-            color={"secondary"}
-          />
+          <Stack spacing={2}>
+            <Pagination
+              count={Math.ceil((productsByCategory.length || 0) / itemsPerPage)}
+              page={currentPage}
+              onChange={handleChange}
+            />
+          </Stack>
         ) : (
           <></>
         )}
