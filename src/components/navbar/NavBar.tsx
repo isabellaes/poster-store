@@ -10,7 +10,11 @@ const NavBar = ({ items }: NavBarPropsType) => {
     <nav className="navbar">
       <ul>
         {items.map((c) => (
-          <NavLink to={`category/${c.id}`}>{c.name}</NavLink>
+          <li>
+            <NavLink style={{}} to={`category/${c.id}`}>
+              {c.name}
+            </NavLink>
+          </li>
         ))}
       </ul>
     </nav>
