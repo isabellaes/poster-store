@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { State } from "../../redux/store";
 import { useParams } from "react-router-dom";
 import ProductCard from "../../components/productCard/ProductCard";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { CartItem, Product } from "../../utils/types";
 import { addToCart } from "../../redux/reducer/cartSlice";
 import Pagination from "@mui/material/Pagination";
@@ -22,7 +22,7 @@ const CategoryPage = () => {
   const endIndex = startIndex + itemsPerPage;
   const displayedProducts = productsByCategory.slice(startIndex, endIndex);
 
-  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+  const handleChange = (value: number) => {
     setCurrentPage(value);
   };
 
@@ -48,7 +48,9 @@ const CategoryPage = () => {
             <Pagination
               count={Math.ceil((productsByCategory.length || 0) / itemsPerPage)}
               page={currentPage}
-              onChange={handleChange}
+              onChange={(_event: ChangeEvent<unknown>, page: number) =>
+                handleChange(page)
+              }
             />
           </Stack>
         ) : (
