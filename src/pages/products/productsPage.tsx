@@ -33,15 +33,15 @@ const ProductsPage = () => {
 
   return (
     <div className="products-page">
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-          Home
-        </Link>
-        <Link underline="hover" color="inherit">
-          Products
-        </Link>
-      </Breadcrumbs>
       <div className="content">
+        <Breadcrumbs aria-label="breadcrumb">
+          <Link underline="hover" color="inherit" href="/">
+            Home
+          </Link>
+          <Link underline="hover" color="inherit">
+            Products
+          </Link>
+        </Breadcrumbs>
         <div className="container">
           {displayedProducts.map((p) => (
             <ProductCard product={p} addToCart={handleAddToCart} />

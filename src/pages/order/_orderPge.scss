@@ -1,0 +1,6 @@
+.order-page {
+  .container-orderConfirmation {
+    @include container-standard;
+    @include flex-column;
+  }
+}
