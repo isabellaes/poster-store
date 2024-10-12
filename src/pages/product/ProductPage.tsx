@@ -36,8 +36,11 @@ const ProductPage = () => {
         <Link underline="hover" color="inherit" href="/">
           Home
         </Link>
+        <Link underline="hover" color="inherit" href="/products">
+          Products
+        </Link>
         <Link underline="hover" color="inherit">
-          Product
+          {`product-${product?.name}`}
         </Link>
       </Breadcrumbs>
       <div className="row">

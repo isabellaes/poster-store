@@ -6,6 +6,8 @@ import { CartItem, Product } from "../../utils/types";
 import { addToCart } from "../../redux/reducer/cartSlice";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Link from "@mui/material/Link";
 
 const ProductsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,6 +33,14 @@ const ProductsPage = () => {
 
   return (
     <div className="products-page">
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link underline="hover" color="inherit" href="/">
+          Home
+        </Link>
+        <Link underline="hover" color="inherit">
+          Products
+        </Link>
+      </Breadcrumbs>
       <div className="content">
         <div className="container">
           {displayedProducts.map((p) => (
