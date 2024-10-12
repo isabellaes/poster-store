@@ -33,9 +33,6 @@ const Root = () => {
           </Badge>
         </div>
       </div>
-      <div className="header-messages">
-        <p>30% off your order RIGHT NOW! </p>
-      </div>
 
       <Outlet />
     </div>
