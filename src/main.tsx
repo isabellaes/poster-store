@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/root/Root.tsx";
 import "./style/main.scss";
 import Index from "./components/index/Index.tsx";
-import CategoryPage from "./pages/category/CategoryPage.tsx";
+import ProductsPage from "./pages/products/productsPage.tsx";
 import ProductPage from "./pages/product/ProductPage.tsx";
 import OrderPage from "./pages/order/OrderPage.tsx";
 import CartPage from "./pages/cart/CartPage.tsx";
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       { index: true, element: <Index /> },
-      { path: "category/:categoryId", element: <CategoryPage /> },
+      { path: "products", element: <ProductsPage /> },
       { path: "product/:productId", element: <ProductPage /> },
       { path: "cart", element: <CartPage /> },
       { path: "order/:orderId", element: <OrderPage /> },

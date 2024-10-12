@@ -3,7 +3,6 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import Search from "../../components/search/Search";
 import { Outlet, useNavigate } from "react-router-dom";
-import { categorys } from "../../utils/data";
 import { useSelector } from "react-redux";
 import { State } from "../../redux/store";
 
@@ -23,7 +22,7 @@ const Root = () => {
       <h1 onClick={() => navigate("/")}>POSTER STORE</h1>
       <p>For all your creative needs.</p>
       <div className="row-spacebetween">
-        <NavBar items={categorys} />
+        <NavBar />
 
         <div className="row">
           <Search />
