@@ -29,7 +29,7 @@ const OrderPage = () => {
         </Breadcrumbs>
 
         <h1>Thank you for your order!</h1>
-        <h4>Products</h4>
+        {/*    <h4>Products</h4>
         <div>
           {order.order?.cartItems.map((item) => (
             <div className="cart-item">
@@ -46,7 +46,7 @@ const OrderPage = () => {
             </div>
           ))}
         </div>
-        <h2>Total: ${totalCost?.toFixed(2)}</h2>
+        <h2>Total: ${totalCost?.toFixed(2)}</h2> */}
         <p>
           If you have any questions please contact us at
           <span> info@posterstore.se</span>

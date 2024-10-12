@@ -26,7 +26,7 @@ const Root = () => {
         <NavBar />
 
         <div className="row">
-          <Search />
+          {/* <Search /> */}
           <Badge badgeContent={sum} color="primary">
             <div onClick={() => navigate("/cart")}>
               <ShoppingCartIcon />
