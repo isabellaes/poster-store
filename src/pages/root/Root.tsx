@@ -1,4 +1,5 @@
 import NavBar from "../../components/navbar/NavBar";
+import Footer from "../../components/footer/Footer";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import Search from "../../components/search/Search";
@@ -35,6 +36,7 @@ const Root = () => {
       </div>
 
       <Outlet />
+      <Footer />
     </div>
   );
 };
