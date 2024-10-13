@@ -2,5 +2,11 @@
   .container-orderConfirmation {
     @include container-standard;
     @include flex-column;
+
+    img {
+      width: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.445);
+      padding: 1em;
+    }
   }
 }

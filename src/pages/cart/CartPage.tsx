@@ -101,12 +101,14 @@ const CartPage = () => {
             <button
               className="btn-cart"
               onClick={() => {
-                createOrder({
-                  id: 1,
-                  date: new Date(),
-                  cartItems: cartItems,
-                  name: "Hello",
-                });
+                dispatch(
+                  createOrder({
+                    id: 1,
+                    date: new Date(),
+                    cartItems: cartItems,
+                    name: "Hello",
+                  })
+                );
                 setTimeout(() => {
                   handleClearCart(), navigate("/order/1");
                 }, 1000);
