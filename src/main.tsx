@@ -10,6 +10,10 @@ import OrderPage from "./pages/order/OrderPage.tsx";
 import CartPage from "./pages/cart/CartPage.tsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.ts";
+import AdminPage from "./pages/admin/AdminPage.tsx";
+import LoginPage from "./pages/admin/LoginPage.tsx";
+import StatisticPage from "./pages/admin/StatisticsPage.tsx";
+import ProducstOverviewPage from "./pages/admin/ProductsOverviewPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +25,15 @@ const router = createBrowserRouter([
       { path: "product/:productId", element: <ProductPage /> },
       { path: "cart", element: <CartPage /> },
       { path: "order/:Id", element: <OrderPage /> },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminPage />,
+    children: [
+      { index: true, element: <LoginPage /> },
+      { path: "statistics", element: <StatisticPage /> },
+      { path: "productsoverview", element: <ProducstOverviewPage /> },
     ],
   },
 ]);
