@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100vw;
 
   .admin-header {
     display: flex;
@@ -19,11 +19,6 @@
       padding: 1em;
       gap: 1em;
     }
-  }
-
-  footer {
-    position: absolute;
-    bottom: 0;
   }
 }
 
@@ -42,5 +37,25 @@
     #submit-login {
       margin-top: 1em;
     }
+  }
+}
+
+.admin-productspage {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  max-width: 100vw;
+  h2 {
+    margin-bottom: 1em;
+  }
+  .tablehead {
+    p {
+      font-size: larger;
+      font-weight: bold;
+    }
+  }
+
+  .lightgrey {
+    background-color: rgb(241, 255, 252);
   }
 }

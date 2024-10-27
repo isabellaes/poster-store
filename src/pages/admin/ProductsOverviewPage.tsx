@@ -1,101 +1,74 @@
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import { Product } from "../../utils/types";
+import { useState } from "react";
+import { products } from "../../utils/data";
+import { DataGrid, GridColDef, GridRowSelectionModel } from "@mui/x-data-grid";
 
 const ProducstOverviewPage = () => {
-  const rows: Product[] = [
+  const [selectedRows, setSelectedRows] = useState<GridRowSelectionModel>([]);
+  const columns: GridColDef<(typeof products)[number]>[] = [
+    { field: "id", headerName: "ID", width: 90 },
     {
-      id: "1",
-      name: "test",
-      price: 100,
-      description: "",
-      tags: ["tag", "tag"],
-      size: "",
-      img: "",
-      category: {
-        id: "1",
-        name: "cat1",
-        img: "",
-      },
+      field: "name",
+      headerName: "Product",
+      width: 150,
+      editable: true,
     },
     {
-      id: "1",
-      name: "test",
-      price: 100,
-      description: "",
-      tags: [],
-      size: "",
-      img: "",
-      category: {
-        id: "1",
-        name: "cat1",
-        img: "",
-      },
+      field: "price",
+      headerName: "Price",
+      width: 150,
+      editable: true,
     },
     {
-      id: "1",
-      name: "test",
-      price: 100,
-      description: "",
-      tags: [],
-      size: "",
-      img: "",
-      category: {
-        id: "1",
-        name: "cat1",
-        img: "",
-      },
+      field: "description",
+      headerName: "Description",
+      width: 110,
+      editable: true,
     },
     {
-      id: "1",
-      name: "test",
-      price: 100,
-      description: "",
-      tags: [],
-      size: "",
-      img: "",
-      category: {
-        id: "1",
-        name: "cat1",
-        img: "",
-      },
+      field: "size",
+      headerName: "Size",
+      width: 110,
+      editable: true,
+    },
+    {
+      field: "tags",
+      headerName: "Tags",
+      width: 110,
+      editable: true,
+    },
+    {
+      field: "img",
+      headerName: "Image",
+      width: 110,
+      editable: true,
+    },
+    {
+      field: "category",
+      headerName: "Category",
+      width: 110,
+      editable: true,
+      valueGetter: (value, row) => `${row.category.name}`,
     },
   ];
   return (
-    <div>
+    <div className="admin-productspage">
       <h2>Products overview page</h2>
-      <TableContainer>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Product</TableCell>
-              <TableCell>Price</TableCell>
-              <TableCell>Description</TableCell>
-              <TableCell>Size</TableCell>
-              <TableCell>Tags</TableCell>
-              <TableCell>Image</TableCell>
-              <TableCell>Category</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((product) => (
-              <TableRow key={product.id}>
-                <TableCell>{product.name}</TableCell>
-                <TableCell>{product.price}</TableCell>
-                <TableCell>{product.description}</TableCell>
-                <TableCell>{product.size}</TableCell>
-                <TableCell>{product?.tags?.join(", ")}</TableCell>
-                <TableCell>{product.img}</TableCell>
-                <TableCell>{product.category.name}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      {selectedRows}
+      <DataGrid
+        rows={products}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 10,
+            },
+          },
+        }}
+        pageSizeOptions={[5]}
+        checkboxSelection
+        onRowSelectionModelChange={(ID) => setSelectedRows([ID.join(", ")])}
+        disableRowSelectionOnClick
+      />
     </div>
   );
 };
