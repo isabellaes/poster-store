@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { products } from "../../utils/data";
-import { DataGrid, GridColDef, GridRowSelectionModel } from "@mui/x-data-grid";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { Product } from "../../utils/types";
 
 const ProducstOverviewPage = () => {
-  const [selectedRows, setSelectedRows] = useState<GridRowSelectionModel>([]);
+  const [selectedRows, setSelectedRows] = useState<Product[]>([]);
   const columns: GridColDef<(typeof products)[number]>[] = [
     { field: "id", headerName: "ID", width: 90 },
     {
@@ -50,10 +51,11 @@ const ProducstOverviewPage = () => {
       valueGetter: (value, row) => `${row.category.name}`,
     },
   ];
+  console.log(selectedRows);
   return (
     <div className="admin-productspage">
       <h2>Products overview page</h2>
-      {selectedRows}
+
       <DataGrid
         rows={products}
         columns={columns}
@@ -66,7 +68,11 @@ const ProducstOverviewPage = () => {
         }}
         pageSizeOptions={[5]}
         checkboxSelection
-        onRowSelectionModelChange={(ID) => setSelectedRows([ID.join(", ")])}
+        onRowSelectionModelChange={(ID) => {
+          const selectedIds = new Set(ID);
+          const product = products.filter((x) => selectedIds.has(x.id));
+          setSelectedRows(product);
+        }}
         disableRowSelectionOnClick
       />
     </div>
