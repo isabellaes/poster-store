@@ -3,8 +3,10 @@ import Footer from "../../components/footer/Footer";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import { Outlet, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { State } from "../../redux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { Dispatch, State } from "../../redux/store";
+import { useEffect } from "react";
+import { fetchProducts } from "../../redux/reducer/productSlice";
 
 const Root = () => {
   const cartItems = useSelector((state: State) => state.cart.items);
@@ -17,6 +19,7 @@ const Root = () => {
   const sum: number = numArray.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
   }, 0);
+
   return (
     <div className="root-element">
       <h1 onClick={() => navigate("/")}>POSTER STORE</h1>

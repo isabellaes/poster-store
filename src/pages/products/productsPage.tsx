@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { State } from "../../redux/store";
+import { Dispatch, State } from "../../redux/store";
 import ProductCard from "../../components/productCard/ProductCard";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { CartItem, Product } from "../../utils/types";
 import { addToCart } from "../../redux/reducer/cartSlice";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
+import { fetchProducts } from "../../redux/reducer/productSlice";
 
 const ProductsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,14 +23,19 @@ const ProductsPage = () => {
     setCurrentPage(value);
   };
 
-  const dispatch = useDispatch();
+  const dispatch1 = useDispatch();
   const handleAddToCart = (product: Product, quantity: number) => {
     const cartItem: CartItem = {
       product: product,
       quantity: quantity,
     };
-    dispatch(addToCart(cartItem));
+    dispatch1(addToCart(cartItem));
   };
+
+  const dispatch = useDispatch<Dispatch>();
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
   return (
     <div className="products-page">

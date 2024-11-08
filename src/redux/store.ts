@@ -9,6 +9,7 @@ const store = configureStore({
     product: productReducer,
     order: orderReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
 
 export type State = ReturnType<typeof store.getState>;

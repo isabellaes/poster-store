@@ -15,7 +15,7 @@ export default function ProductCard(props: props) {
       <img
         src={props.product.img}
         alt="product-img"
-        onClick={() => navigate(`/product/${props.product.id}`)}
+        onClick={() => navigate(`/product/${props.product._id}`)}
       />
 
       <div className="product-info">

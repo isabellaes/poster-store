@@ -15,7 +15,7 @@ const ProductPage = () => {
   const [quantity, setQuantity] = useState<number>(1);
 
   const products = useSelector((state: State) => state.product.products);
-  const product = products.find((p) => p.id === params.productId);
+  const product = products.find((p) => p._id === params.productId);
 
   const dispatch = useDispatch();
   const handleAddToCart = (product: Product) => {
